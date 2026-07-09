@@ -1140,7 +1140,7 @@ body.light-mode ::-webkit-scrollbar-thumb:hover {
     border-radius: 50%;
     filter: blur(40px);
     opacity: 0.12;
-    background: radial-gradient(circle, #8b5cf6, #3b82f6);
+    background: radial-gradient(circle, #fbbf24, #f59e0b);
 }
 
 .hero-image-border {
