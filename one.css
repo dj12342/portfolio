@@ -2150,43 +2150,95 @@ body.light-mode ::-webkit-scrollbar-thumb:hover {
     flex-shrink: 0;
 }
 
-/* ===== TECH STACK ===== */
+/* ===== TECH STACK - AUTO SCROLL TICKER ===== */
+.tech-stack-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 12px 0;
+}
+
 .tech-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    gap: 20px;
+    align-items: center;
+    animation: scrollTech 20s linear infinite;
+    width: max-content;
+}
+
+/* Pause on hover */
+.tech-stack-wrapper:hover .tech-grid {
+    animation-play-state: paused;
+}
+
+@keyframes scrollTech {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .tech-item {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
+    gap: 10px;
+    padding: 10px 20px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
     font-size: 14px;
     font-weight: 500;
     color: #a1a1aa;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     cursor: default;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
-.tech-item::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--tech-color, #ffffff);
+.tech-item svg {
+    width: 22px;
+    height: 22px;
     flex-shrink: 0;
 }
 
-.tech-item:hover {
-    transform: translateY(-2px) scale(1.04);
-    border-color: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
+/* Color dot */
+.tech-item::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--tech-color, #ffffff);
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
 }
 
+.tech-item:hover::before {
+    opacity: 1;
+}
+
+/* Hover */
+.tech-item:hover {
+    transform: scale(1.08);
+    border-color: var(--tech-color, rgba(255,255,255,0.3));
+    color: #ffffff;
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* Light mode */
+body.light-mode .tech-item {
+    border-color: rgba(0, 0, 0, 0.06);
+    color: #71717a;
+    background: rgba(0, 0, 0, 0.02);
+}
+body.light-mode .tech-item:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    color: #09090b;
+    background: rgba(0, 0, 0, 0.04);
+}
 /* ===== GITHUB ===== */
 .github-grid {
     display: grid;
@@ -2550,7 +2602,17 @@ body.light-mode ::-webkit-scrollbar-thumb:hover {
     border: 1px solid rgba(52, 211, 153, 0.15);
     color: #34d399;
 }
+.float-viber {
+    background: #665cac;
+    border-color: #665cac;
+    color: #ffffff;
+}
 
+.float-viber:hover {
+    background: #564b9c;
+    border-color: #564b9c;
+    color: #ffffff;
+}
 .form-status.error {
     display: block;
     background: rgba(239, 68, 68, 0.08);

@@ -131,7 +131,7 @@ const projects = [
         category: "Accessibility",
         status: "freelance",
         github: "#",
-        demo: "#",
+        demo: "https://gdcoforlando.com/",
         featured: false,
     },
 ];
@@ -438,7 +438,6 @@ function initSkillBars() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 })();
-// Add this to your existing script.js file
 
 // ============================================================
 // THEME TOGGLE - FIXED
@@ -474,6 +473,7 @@ function initSkillBars() {
         }
     }
 })();
+
 // ============================================================
 // CONTACT FORM - FIXED
 // ============================================================
@@ -539,5 +539,26 @@ function initSkillBars() {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         }
+    });
+})();
+
+// ============================================================
+// TECH STACK - AUTO DUPLICATE FOR SEAMLESS SCROLL
+// ============================================================
+
+(function initTechStack() {
+    const grid = document.getElementById('techGrid');
+    if (!grid) {
+        console.warn('Tech grid not found!');
+        return;
+    }
+    
+    // Get all tech items
+    const items = grid.querySelectorAll('.tech-item');
+    
+    // Clone all items and append them (duplicate for seamless loop)
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        grid.appendChild(clone);
     });
 })();
