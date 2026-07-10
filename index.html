@@ -506,38 +506,295 @@
         </section>
 
         <!-- ===== PROJECTS ===== -->
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-label">
-                    <span class="section-number">04</span>
-                    <span class="section-line"></span>
-                    <span class="section-name">Projects</span>
-                </div>
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-label">
+            <span class="section-number">04</span>
+            <span class="section-line"></span>
+            <span class="section-name">Projects</span>
+        </div>
 
-                <div class="projects-header">
-                    <h2 class="section-title gradient-text">Projects</h2>
-                    <div class="projects-search">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                        <input type="text" id="project-search" placeholder="Search projects..." />
+        <div class="projects-header">
+            <h2 class="section-title gradient-text">Projects</h2>
+            <div class="projects-search">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="project-search" placeholder="Search projects..." />
+            </div>
+        </div>
+
+        <div class="projects-filter" id="project-filter">
+            <button class="filter-btn active" data-category="All">All</button>
+            <button class="filter-btn" data-category="Web Development">Web Development</button>
+            <button class="filter-btn" data-category="Automation">Automation</button>
+            <button class="filter-btn" data-category="AI / Computer Vision">AI / Computer Vision</button>
+            <button class="filter-btn" data-category="Mobile Development">Mobile Development</button>
+            <button class="filter-btn" data-category="System Development">System Development</button>
+            <button class="filter-btn" data-category="Networking">Networking</button>
+            <button class="filter-btn" data-category="Accessibility">Accessibility</button>
+        </div>
+
+        <!-- ===== DITO ILALAGAY ANG PROJECTS ===== -->
+        <div class="projects-grid reveal" id="projects-grid">
+            
+            <!-- Project 1: Heron's Cart -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/herons-cart.jpg" alt="Heron's Cart" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-featured">★ Featured</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Heron's Cart</h3>
+                    <p class="project-category">Web Development</p>
+                    <p class="project-desc">A full-featured e-commerce website with product listings, cart functionality, user authentication, and an order management system.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">PHP</span>
+                        <span class="project-tech-tag">MySQL</span>
+                        <span class="project-tech-tag">Bootstrap</span>
+                        <span class="project-tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
                     </div>
                 </div>
+            </div>
 
-                <div class="projects-filter" id="project-filter">
-                    <button class="filter-btn active" data-category="All">All</button>
-                    <button class="filter-btn" data-category="Web Development">Web Development</button>
-                    <button class="filter-btn" data-category="Automation">Automation</button>
-                    <button class="filter-btn" data-category="AI / Computer Vision">AI / Computer Vision</button>
-                    <button class="filter-btn" data-category="Mobile Development">Mobile Development</button>
-                    <button class="filter-btn" data-category="System Development">System Development</button>
-                    <button class="filter-btn" data-category="Networking">Networking</button>
-                    <button class="filter-btn" data-category="Accessibility">Accessibility</button>
+            <!-- Project 2: MakVille Rentals -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/makville-rentals.jpg" alt="MakVille Rentals" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-featured">★ Featured</div>
                 </div>
-
-                <div class="projects-grid reveal" id="projects-grid">
-                    <!-- Projects will be rendered by JavaScript -->
+                <div class="project-body">
+                    <h3 class="project-title">MakVille Rentals</h3>
+                    <p class="project-category">Web Development</p>
+                    <p class="project-desc">House rental platform with property listings, booking system, and tenant management. Capstone thesis with Best Security Design award.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">PHP</span>
+                        <span class="project-tech-tag">MySQL</span>
+                        <span class="project-tech-tag">Bootstrap</span>
+                        <span class="project-tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Project 3: Intellicam -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/intellicam.jpg" alt="Intellicam" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-featured">★ Featured</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Intellicam</h3>
+                    <p class="project-category">AI / Computer Vision</p>
+                    <p class="project-desc">CCTV system with facial recognition capabilities and a web interface for live feed monitoring, event logging, and intruder detection alerts.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Python</span>
+                        <span class="project-tech-tag">OpenCV</span>
+                        <span class="project-tech-tag">Flask</span>
+                        <span class="project-tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: HIS Automation -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/his-automation.jpg" alt="HIS Automation" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-featured">★ Featured</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">HIS Automation Tool</h3>
+                    <p class="project-category">Automation</p>
+                    <p class="project-desc">Automated account unlock and password reset process for The Medical City HIS system using Playwright, reducing manual IT tasks significantly.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Python</span>
+                        <span class="project-tech-tag">Playwright</span>
+                        <span class="project-tech-tag">HIS API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Mang Delfin's NMT -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/mang-delfins-nmt.jpg" alt="Mang Delfin's NMT" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-featured">★ Featured</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Mang Delfin's NMT</h3>
+                    <p class="project-category">Networking</p>
+                    <p class="project-desc">Network monitoring tool for real-time tracking of network performance, uptime, connected devices, and anomaly detection with dashboard UI.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Python</span>
+                        <span class="project-tech-tag">Flask</span>
+                        <span class="project-tech-tag">Chart.js</span>
+                        <span class="project-tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Playwright Automation -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/playwright-automation.jpg" alt="Playwright Automation" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status freelance">Freelance</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Playwright Automation Tool</h3>
+                    <p class="project-category">Automation</p>
+                    <p class="project-desc">NetSuite data extraction automation tool using Playwright for scheduled reporting, data pipeline, and Excel export. Freelance project.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Python</span>
+                        <span class="project-tech-tag">Playwright</span>
+                        <span class="project-tech-tag">OpenPyXL</span>
+                        <span class="project-tech-tag">NetSuite API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7: Kiosk System -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/kiosk-system.jpg" alt="University Kiosk System" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status freelance">Freelance</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">University Kiosk System</h3>
+                    <p class="project-category">System Development</p>
+                    <p class="project-desc">Interactive kiosk system developed for University of Makati for student self-service, information access, and campus navigation.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">C#</span>
+                        <span class="project-tech-tag">.NET</span>
+                        <span class="project-tech-tag">SQL Server</span>
+                        <span class="project-tech-tag">WinForms</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8: GrowCab -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/growcab.jpg" alt="GrowCab" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status freelance">Freelance</span>
+                    </div>
+                    <div class="project-featured">★ Featured</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">GrowCab</h3>
+                    <p class="project-category">Mobile Development</p>
+                    <p class="project-desc">Mobile learning management application for educational content delivery, quiz modules, and student progress tracking built with Flutter.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Flutter</span>
+                        <span class="project-tech-tag">Firebase</span>
+                        <span class="project-tech-tag">Dart</span>
+                        <span class="project-tech-tag">Cloud Firestore</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 9: Endorsement Tracker -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/endorsement-tracker.jpg" alt="Endorsement Tracker" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Endorsement Tracker</h3>
+                    <p class="project-category">System Development</p>
+                    <p class="project-desc">Internal endorsement management system developed for The Medical City to streamline inter-departmental endorsement workflows and tracking.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Python</span>
+                        <span class="project-tech-tag">Flask</span>
+                        <span class="project-tech-tag">PostgreSQL</span>
+                        <span class="project-tech-tag">Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 10: GDCO Orlando -->
+            <div class="project-card">
+                <div class="project-screenshot">
+                    <img src="images/projects/gdco-orlando.jpg" alt="GDCO Orlando" class="project-img" />
+                    <div class="project-badges">
+                        <span class="project-status freelance">Freelance</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">GDCO for Orlando</h3>
+                    <p class="project-category">Accessibility</p>
+                    <p class="project-desc">ADA accessibility enhancement and WAVE compliance remediation for a client website. Improved accessibility score and compliance.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">HTML5</span>
+                        <span class="project-tech-tag">CSS3</span>
+                        <span class="project-tech-tag">JavaScript</span>
+                        <span class="project-tech-tag">WCAG 2.1</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Code</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ===== END OF PROJECTS ===== -->
+    </div>
+</section>
 
         <!-- ===== CERTIFICATES ===== -->
         <section id="certificates" class="section">
@@ -828,7 +1085,7 @@
 <section id="contact" class="section">
     <div class="container">
         <div class="section-label">
-            <span class="section-number">09</span>
+            <span class="section-number">08</span>
             <span class="section-line"></span>
             <span class="section-name">Contact</span>
         </div>

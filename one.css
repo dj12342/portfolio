@@ -1818,6 +1818,20 @@ body.light-mode ::-webkit-scrollbar-thumb:hover {
     overflow: hidden;
 }
 
+/* ===== NEW: Project Image Styles ===== */
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.08);
+}
+/* ===== END NEW ===== */
+
 .project-screenshot-placeholder {
     display: flex;
     flex-direction: column;

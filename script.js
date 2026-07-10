@@ -31,6 +31,7 @@ const projects = [
         tech: ["PHP", "MySQL", "Bootstrap", "JavaScript", "CSS3"],
         category: "Web Development",
         status: "completed",
+        image: "images/projects/herons-cart.jpg", // ← DAGDAGAN
         github: "#",
         demo: "#",
         featured: true,
@@ -42,6 +43,7 @@ const projects = [
         tech: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
         category: "Web Development",
         status: "completed",
+        image: "images/makville/makville.png",
         github: "#",
         demo: "#",
         featured: true,
@@ -53,6 +55,7 @@ const projects = [
         tech: ["Python", "OpenCV", "Flask", "SQLite", "JavaScript"],
         category: "AI / Computer Vision",
         status: "completed",
+        image: "images/projects/intellicam.jpg",
         github: "#",
         demo: "#",
         featured: true,
@@ -64,6 +67,7 @@ const projects = [
         tech: ["Python", "Playwright", "HIS API"],
         category: "Automation",
         status: "completed",
+        image: "images/HIS/ulock.png",
         github: "#",
         demo: "#",
         featured: true,
@@ -75,6 +79,7 @@ const projects = [
         tech: ["Python", "Flask", "JavaScript", "SQLite", "Chart.js"],
         category: "Networking",
         status: "completed",
+        image: "images/projects/mang-delfins-nmt.jpg",
         github: "#",
         demo: "#",
         featured: true,
@@ -86,6 +91,7 @@ const projects = [
         tech: ["Python", "Playwright", "NetSuite API", "OpenPyXL"],
         category: "Automation",
         status: "freelance",
+        image: "images/projects/playwright-automation.jpg",
         github: "#",
         demo: "#",
         featured: false,
@@ -97,6 +103,7 @@ const projects = [
         tech: ["C#", ".NET", "SQL Server", "WinForms"],
         category: "System Development",
         status: "freelance",
+        image: "images/kiosks/kiosks.png",
         github: "#",
         demo: "#",
         featured: false,
@@ -108,6 +115,7 @@ const projects = [
         tech: ["Flutter", "Firebase", "Dart", "Cloud Firestore"],
         category: "Mobile Development",
         status: "freelance",
+        image: "images/projects/growcab.jpg",
         github: "#",
         demo: "#",
         featured: true,
@@ -119,6 +127,7 @@ const projects = [
         tech: ["Python", "Flask", "PostgreSQL", "Bootstrap"],
         category: "System Development",
         status: "completed",
+        image: "images/etracker/etracker1.png",
         github: "#",
         demo: "#",
         featured: false,
@@ -129,7 +138,8 @@ const projects = [
         description: "ADA accessibility enhancement and WAVE compliance remediation for a client website. Improved accessibility score and compliance. Freelance project.",
         tech: ["HTML5", "CSS3", "JavaScript", "WCAG 2.1", "ARIA"],
         category: "Accessibility",
-        status: "freelance",
+        status: "Project",
+        image: "images/gdcofor/gd.png", 
         github: "#",
         demo: "https://gdcoforlando.com/",
         featured: false,
@@ -346,7 +356,7 @@ function initSkillBars() {
 })();
 
 // ============================================================
-// PROJECTS
+// PROJECTS - WITH SCREENSHOTS
 // ============================================================
 
 (function initProjects() {
@@ -375,13 +385,21 @@ function initSkillBars() {
             return;
         }
 
-        grid.innerHTML = filtered.map((p) => `
+        grid.innerHTML = filtered.map((p) => {
+            // Check if image exists
+            const hasImage = p.image && p.image.trim() !== '';
+            
+            return `
             <div class="project-card">
                 <div class="project-screenshot">
-                    <div class="project-screenshot-placeholder">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                        <span>SCREENSHOT PENDING</span>
-                    </div>
+                    ${hasImage ? `
+                        <img src="${p.image}" alt="${p.title} Screenshot" class="project-img" />
+                    ` : `
+                        <div class="project-screenshot-placeholder">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            <span>SCREENSHOT PENDING</span>
+                        </div>
+                    `}
                     <div class="project-badges">
                         <span class="project-status ${p.status}">${p.status}</span>
                     </div>
@@ -401,7 +419,7 @@ function initSkillBars() {
                     </div>
                 </div>
             </div>
-        `).join('');
+        `}).join('');
     }
 
     // Filter buttons
