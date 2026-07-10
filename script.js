@@ -475,7 +475,7 @@ function initSkillBars() {
 })();
 
 // ============================================================
-// CONTACT FORM - FIXED
+// CONTACT FORM - FORMPREE INTEGRATION
 // ============================================================
 
 (function initContactForm() {
@@ -490,8 +490,6 @@ function initSkillBars() {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        console.log('Form submitted'); // Debug log
-
         // Reset status
         status.className = 'form-status';
         status.style.display = 'none';
@@ -507,32 +505,30 @@ function initSkillBars() {
         const formData = new FormData(form);
 
         try {
-            console.log('Sending to:', form.action); // Debug log
-
             const response = await fetch(form.action, {
                 method: 'POST',
-                body: formData
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
 
-            console.log('Response status:', response.status); // Debug log
-
             const data = await response.json();
-            console.log('Response data:', data); // Debug log
 
-            if (data.success) {
+            if (response.ok) {
                 status.className = 'form-status success';
                 status.textContent = 'Message sent successfully! I\'ll get back to you shortly.';
                 status.style.display = 'block';
                 form.reset();
             } else {
                 status.className = 'form-status error';
-                status.textContent = '' + (data.error || 'Failed to send. Please try again.');
+                status.textContent = data.error || 'Failed to send. Please try again.';
                 status.style.display = 'block';
             }
         } catch (error) {
-            console.error('Error:', error); // Debug log
+            console.error('Error:', error);
             status.className = 'form-status error';
-            status.textContent = 'Network error: ' + error.message;
+            status.textContent = 'Network error. Please check your connection.';
             status.style.display = 'block';
         } finally {
             // Restore button
