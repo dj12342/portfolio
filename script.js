@@ -393,7 +393,7 @@ function initSkillBars() {
             <div class="project-card">
                 <div class="project-screenshot">
                     ${hasImage ? `
-                        <img src="${p.image}" alt="${p.title} Screenshot" class="project-img" />
+                        <img src="${p.image}" alt="${p.title}" class="project-img" />
                     ` : `
                         <div class="project-screenshot-placeholder">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
